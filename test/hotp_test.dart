@@ -64,11 +64,11 @@ void main() {
   });
 
   test('[HOTP] Fail Conditions: Init Asserts', () {
-    expect(() => HOTP(secret: null),
+    expect(() => HOTP(secret: ''),
         throwsA(predicate((e) => e.toString().contains('secret != null'))));
-    expect(() => HOTP(secret: '', digits: null),
+    expect(() => HOTP(secret: '', digits: 0),
         throwsA(predicate((e) => e.toString().contains('digits != null'))));
-    expect(() => HOTP(secret: '', digits: 0, algorithm: null),
+    expect(() => HOTP(secret: '', digits: 0, algorithm: OTPAlgorithm.SHA1),
         throwsA(predicate((e) => e.toString().contains('algorithm != null'))));
   });
 
