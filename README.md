@@ -3,8 +3,10 @@
 This is a fork of the [dart_otp](https://github.com/factisresearch/dart_otp/blob/master/test/totp_test.dart) repository, thank you for this contribution. Currently the original repo is not compatible with null safety so we made an update to make it compatible with newer versions of dart, e.g. 2.12.0.
 ___
 
+
+
 [![pub package](https://img.shields.io/pub/v/dart_otp.svg)](https://pub.dev/packages/dart_otp)
-[![Build Status](https://travis-ci.org/BrunoMiguens/dart_otp.svg?branch=master)](https://travis-ci.org/BrunoMiguens/dart_otp)
+[![Build Status](https://app.travis-ci.com/baldomerocho/dart_otp.svg?branch=master)](https://app.travis-ci.com/baldomerocho/dart_otp)
 [![Coverage Status](https://coveralls.io/repos/github/BrunoMiguens/dart_otp/badge.svg?branch=master)](https://coveralls.io/github/BrunoMiguens/dart_otp?branch=master)
 
 `dart_otp` is a dart package to generate and verify one-time passwords that were used to implement 2FA and MFA authentication method in web applications and other login-required systems.
