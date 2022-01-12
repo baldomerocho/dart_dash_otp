@@ -5,10 +5,6 @@ ___
 
 
 
-[![pub package](https://img.shields.io/pub/v/dart_otp.svg)](https://pub.dev/packages/dart_otp)
-[![Build Status](https://app.travis-ci.com/baldomerocho/dart_otp.svg?branch=master)](https://app.travis-ci.com/baldomerocho/dart_otp)
-[![Coverage Status](https://coveralls.io/repos/github/baldomerocho/dart_otp/badge.svg?branch=master)](https://coveralls.io/github/baldomerocho/dart_otp?branch=master)
-
 `dart_otp` is a dart package to generate and verify one-time passwords that were used to implement 2FA and MFA authentication method in web applications and other login-required systems.
 
 The package was implement based on [RFC4226](https://tools.ietf.org/html/rfc4226) (HOTP: An HMAC-Based One-Time Password Algorithm) and [RFC6238](https://tools.ietf.org/html/rfc6238) (TOTP: Time-Based One-Time Password Algorithm).
@@ -28,7 +24,9 @@ Add `dart_otp` as a dependency in your `pubspec.yaml` file.
 
 ```yaml
 dependencies:
-  dart_otp: ^1.3.0
+  dart_otp:
+    git:
+      url: https://github.com/baldomerocho/dart_otp.git
 ```
 
 ### Example

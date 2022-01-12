@@ -41,3 +41,7 @@
 
 * Minor enhancements
 * Add support for SHA384 and SHA512 algorithm (available: SHA1, SHA256, SHA384 and SHA512)
+
+## [1.3.1]
+
+* Null safety
