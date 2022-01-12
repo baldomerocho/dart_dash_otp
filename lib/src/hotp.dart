@@ -4,8 +4,8 @@
 ///
 
 import 'otp.dart';
-import 'package:dart_otp/src/components/otp_type.dart';
-import 'package:dart_otp/src/components/otp_algorithm.dart';
+import 'package:dart_dash_otp/src/components/otp_type.dart';
+import 'package:dart_dash_otp/src/components/otp_algorithm.dart';
 
 ///
 /// HOTP class will generate the OTP (One Time Password) object with given counter.

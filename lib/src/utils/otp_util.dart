@@ -1,4 +1,4 @@
-import 'package:dart_otp/dart_otp.dart';
+import 'package:dart_dash_otp/dart_dash_otp.dart';
 
 abstract class OTPUtil {
   static String? otpTypeValue({OTPType? type}) {
