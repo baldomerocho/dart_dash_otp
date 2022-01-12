@@ -45,3 +45,7 @@
 ## [1.3.1]
 
 * Null safety
+
+## [1.3.2]
+
+* Fixing installation
