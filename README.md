@@ -24,9 +24,7 @@ Add `dart_otp` as a dependency in your `pubspec.yaml` file.
 
 ```yaml
 dependencies:
-  dart_otp:
-    git:
-      url: https://github.com/baldomerocho/dart_otp.git
+  dart_dash_otp: ^1.3.1
 ```
 
 ### Example
