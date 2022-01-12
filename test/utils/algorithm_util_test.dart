@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:crypto/crypto.dart';
-import 'package:dart_otp/src/components/otp_algorithm.dart';
-import 'package:dart_otp/src/utils/algorithm_util.dart';
+import 'package:dart_dash_otp/src/components/otp_algorithm.dart';
+import 'package:dart_dash_otp/src/utils/algorithm_util.dart';
 import 'package:test/test.dart';
 
 void main() {

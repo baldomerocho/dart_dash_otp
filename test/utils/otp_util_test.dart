@@ -1,5 +1,5 @@
-import 'package:dart_otp/src/components/otp_type.dart';
-import 'package:dart_otp/src/utils/otp_util.dart';
+import 'package:dart_dash_otp/src/components/otp_type.dart';
+import 'package:dart_dash_otp/src/utils/otp_util.dart';
 import 'package:test/test.dart';
 
 void main() {
