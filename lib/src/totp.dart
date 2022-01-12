@@ -5,8 +5,8 @@
 
 import 'otp.dart';
 import 'components/otp_type.dart';
-import 'package:dart_otp/src/utils/generic_util.dart';
-import 'package:dart_otp/src/components/otp_algorithm.dart';
+import 'package:dart_dash_otp/src/utils/generic_util.dart';
+import 'package:dart_dash_otp/src/components/otp_algorithm.dart';
 
 ///
 /// TOTP class will generate the OTP (One Time Password) object with the current or given time.

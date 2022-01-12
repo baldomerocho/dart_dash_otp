@@ -5,11 +5,11 @@
 
 import 'dart:math';
 import 'package:base32/base32.dart';
-import 'package:dart_otp/src/components/otp_algorithm.dart';
-import 'package:dart_otp/src/components/otp_type.dart';
-import 'package:dart_otp/src/utils/generic_util.dart';
-import 'package:dart_otp/src/utils/algorithm_util.dart';
-import 'package:dart_otp/src/utils/otp_util.dart';
+import 'package:dart_dash_otp/src/components/otp_algorithm.dart';
+import 'package:dart_dash_otp/src/components/otp_type.dart';
+import 'package:dart_dash_otp/src/utils/generic_util.dart';
+import 'package:dart_dash_otp/src/utils/algorithm_util.dart';
+import 'package:dart_dash_otp/src/utils/otp_util.dart';
 
 abstract class OTP {
   /// The length of the one-time password, between 6 and 8.
