@@ -28,12 +28,16 @@ class TOTP extends OTP {
   ///
   /// Will throw an exception if the line above isn't satisfied.
   ///
-  TOTP(
-      {required String? secret,
-      int? digits = 6,
-      int interval = 30,
-      OTPAlgorithm algorithm = OTPAlgorithm.SHA1})
-      : super(secret: secret!, digits: digits!, algorithm: algorithm) {
+  TOTP({
+    required String secret,
+    int digits = 6,
+    int interval = 30,
+    OTPAlgorithm algorithm = OTPAlgorithm.SHA1,
+  }) : super(
+          secret: secret,
+          digits: digits,
+          algorithm: algorithm,
+        ) {
     this.interval = interval;
   }
 
@@ -46,8 +50,10 @@ class TOTP extends OTP {
   /// ```
   ///
   String now() {
-    int _formatTime =
-        Util.timeFormat(time: DateTime.now(), interval: interval!);
+    int _formatTime = Util.timeFormat(
+      time: DateTime.now(),
+      interval: interval!,
+    );
     return super.generateOTP(input: _formatTime);
   }
 

@@ -34,31 +34,35 @@ abstract class OTP {
   /// [algorithm] have a default value, so can be ignored.
   /// Will throw an exception if the line above isn't satisfied.
   ///
-  OTP(
-      {required this.secret,
-      this.digits = 6,
-      this.algorithm = OTPAlgorithm.SHA1})
-      : assert(digits >= 6 && digits <= 8);
+  OTP({
+    required this.secret,
+    this.digits = 6,
+    this.algorithm = OTPAlgorithm.SHA1,
+  }) : assert(digits >= 6 && digits <= 8);
 
   ///
   /// When class HOTP or TOTP pass the input params to this
   /// function, it will generate the OTP object with params,
   /// the params may be counter or time.
   ///
-  /// All parameters are mandatory however [algorithm] have
-  /// a default value, so can be ignored.
+  /// [input] parameter is mandatory, and [algorithm] defaults
+  /// to value passed to the constructor ([OTP.algorithm]).
   ///
-  String generateOTP({int? input, OTPAlgorithm algorithm = OTPAlgorithm.SHA1}) {
+  String generateOTP({
+    required int input,
+    OTPAlgorithm? algorithm,
+  }) {
     /// base32 decode the secret
     var hmacKey = base32.decode(this.secret);
 
     /// initial the HMAC-SHA1 object
-    var hmacSha =
-        AlgorithmUtil.createHmacFor(algorithm: algorithm, key: hmacKey)!;
+    var hmacSha = AlgorithmUtil.createHmacFor(
+      algorithm: algorithm ?? this.algorithm,
+      key: hmacKey,
+    )!;
 
     /// get hmac answer
-    var hmac =
-        hmacSha.convert(Util.intToBytelist(input: input) as List<int>).bytes;
+    var hmac = hmacSha.convert(Util.intToBytelist(input)).bytes;
 
     /// calculate the init offset
     int offset = hmac[hmac.length - 1] & 0xf;
@@ -89,10 +93,7 @@ abstract class OTP {
     final _issuer = Uri.encodeQueryComponent(issuer ?? '');
 
     final _algorithm = AlgorithmUtil.rawValue(algorithm: algorithm);
-    final _extra = extraUrlProperties
-        .map((key, value) => MapEntry(key, "$key=$value"))
-        .values
-        .join('&');
+    final _extra = extraUrlProperties.map((key, value) => MapEntry(key, "$key=$value")).values.join('&');
 
     return 'otpauth://$_type/$_account?secret=$_secret&issuer=$_issuer&digits=$digits&algorithm=$_algorithm&$_extra';
   }

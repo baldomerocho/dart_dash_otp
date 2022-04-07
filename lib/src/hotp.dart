@@ -22,17 +22,21 @@ class HOTP extends OTP {
   ///
   /// This constructor will create an HOTP instance.
   ///
-  /// All parameters are mandatory however [counter],
-  /// [digits] and [algorithm] have a default values, so can be ignored.
+  /// All parameters are mandatory however [counter], [digits]
+  /// and [algorithm] have a default value, so can be ignored.
   ///
   /// Will throw an exception if the line above isn't satisfied.
   ///
-  HOTP(
-      {required String secret,
-      this.counter = 0,
-      int digits = 6,
-      OTPAlgorithm? algorithm = OTPAlgorithm.SHA1})
-      : super(secret: secret, digits: digits, algorithm: algorithm!);
+  HOTP({
+    required String secret,
+    this.counter = 0,
+    int digits = 6,
+    OTPAlgorithm algorithm = OTPAlgorithm.SHA1,
+  }) : super(
+          secret: secret,
+          digits: digits,
+          algorithm: algorithm,
+        );
 
   ///
   /// Generate the HOTP value with the given count

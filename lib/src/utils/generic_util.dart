@@ -29,11 +29,14 @@ abstract class Util {
   ///
   /// @return {List}
   ///
-  static List intToBytelist({int? input, int padding = 8}) {
+  static List<int> intToBytelist(
+    int input, {
+    int padding = 8,
+  }) {
     List<int> _result = [];
     var _input = input;
     while (_input != 0) {
-      _result.add(_input! & 0xff);
+      _result.add(_input & 0xff);
       _input >>= padding;
     }
     _result.addAll(List<int>.generate(padding, (_) => 0));
