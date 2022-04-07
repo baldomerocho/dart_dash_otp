@@ -1,6 +1,6 @@
 name: dart_dash_otp
 description: dart_dash_otp is a dart package to generate and verify one-time passwords.
-version: 1.3.2
+version: 1.3.3
 homepage: https://github.com/baldomerocho/dart_dash_otp
 
 environment:

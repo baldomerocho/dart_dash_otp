@@ -49,3 +49,7 @@
 ## [1.3.2]
 
 * Fixing installation
+
+## [1.3.3]
+
+* Use algorithm value from constructor when generating OTP
