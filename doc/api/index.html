@@ -4,28 +4,34 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="generator" content="made with love by dartdoc 0.28.2">
-  <meta name="description" content="dart_otp API docs, for the Dart programming language.">
-  <title>dart_otp - Dart API docs</title>
+  <meta name="generator" content="made with love by dartdoc 6.0.0">
+  <meta name="description" content="dart_dash_otp API docs, for the Dart programming language.">
+  <title>dart_dash_otp - Dart API docs</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="static-assets/github.css">
-  <link rel="stylesheet" href="static-assets/styles.css">
-  <link rel="icon" href="static-assets/favicon.png">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
   
 </head>
 
-<body>
+
+<body data-base-href="" data-using-base-href="false">
 
 <div id="overlay-under-drawer"></div>
 
 <header id="title">
   <button id="sidenav-left-toggle" type="button">&nbsp;</button>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
-    <li><a href="https://github.com/BrunoMiguens/dart_otp">dart_otp package</a></li>
+    <li><a href="https://github.com/baldomerocho/dart_dash_otp">dart_dash_otp package</a></li>
   </ol>
-  <div class="self-name">dart_otp</div>
+  <div class="self-name">dart_dash_otp</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -33,38 +39,27 @@
 
 <main>
 
-  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
-      <form class="search-sidebar" role="search">
-        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
-      </form>
-    </header>
-    
-    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-      <li><a href="https://github.com/BrunoMiguens/dart_otp">dart_otp package</a></li>
-    </ol>
-    
-    <h5 class="hidden-xs"><span class="package-name">dart_otp</span> <span class="package-kind">package</span></h5>
-    <ol>
-          <li class="section-title">Libraries</li>
-          <li><a href="dart_otp/dart_otp-library.html">dart_otp</a></li>
-    </ol>
-  </div>
 
-  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
-      <section class="desc markdown">
-        <h1 id="dart_otp">dart_otp</h1>
-<p><a href="https://pub.dev/packages/dart_otp"><img src="https://img.shields.io/pub/v/dart_otp.svg" alt="pub package"></a>
-<a href="https://travis-ci.org/BrunoMiguens/dart_otp"><img src="https://travis-ci.org/BrunoMiguens/dart_otp.svg?branch=master" alt="Build Status"></a>
-<a href="https://coveralls.io/github/BrunoMiguens/dart_otp?branch=master"><img src="https://coveralls.io/repos/github/BrunoMiguens/dart_otp/badge.svg?branch=master" alt="Coverage Status"></a></p>
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="dart_otp---null-safety">dart_otp - Null Safety</h1>
+<p>This is a fork of the <a href="https://github.com/factisresearch/dart_otp/blob/master/test/totp_test.dart">dart_otp</a> repository, thank you for this contribution. Currently the original repo is not compatible with null safety so we made an update to make it compatible with newer versions of dart, e.g. 2.12.0.</p>
+<hr>
 <p><code>dart_otp</code> is a dart package to generate and verify one-time passwords that were used to implement 2FA and MFA authentication method in web applications and other login-required systems.</p>
 <p>The package was implement based on <a href="https://tools.ietf.org/html/rfc4226">RFC4226</a> (HOTP: An HMAC-Based One-Time Password Algorithm) and <a href="https://tools.ietf.org/html/rfc6238">RFC6238</a> (TOTP: Time-Based One-Time Password Algorithm).</p>
-<h2 id="feature">Feature</h2><ul><li>Generate a <code>otpauth url</code> with the b32 encoded string</li><li>Create and verify a HOTP object</li><li>Create and verify a TOTP object</li></ul>
+<h2 id="feature">Feature</h2>
+<ul>
+<li>Create and verify a HOTP object</li>
+<li>Create and verify a TOTP object</li>
+<li>Generate a <code>otpauth url</code> with the b32 encoded string</li>
+<li>Support for OTP tokens encrypted with SHA1, SHA256, SHA384 and SHA512</li>
+</ul>
 <h3 id="installation">Installation</h3>
 <h4 id="pubspec">Pubspec</h4>
 <p>Add <code>dart_otp</code> as a dependency in your <code>pubspec.yaml</code> file.</p>
 <pre class="language-yaml"><code class="language-yaml">dependencies:
-  dart_otp: ^1.3.0
+  dart_dash_otp: ^1.3.2
 </code></pre>
 <h3 id="example">Example</h3>
 <h4 id="time-based-otps">Time-based OTPs</h4>
@@ -109,44 +104,112 @@ void main() {
 </code></pre>
 <h3 id="release-notes">Release notes</h3>
 <p>See <a href="./CHANGELOG.md">CHANGELOG.md</a>.</p>
-      </section>
-      
-        <section class="summary">
-            <h2>Libraries</h2>
-          <dl>
-            <dt id="dart_otp">
-              <span class="name"><a href="dart_otp/dart_otp-library.html">dart_otp</a></span>             
-            </dt>
-            <dd>
-              @project  : dart_otp
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="dart_dash_otp">
+  <span class="name"><a href="dart_dash_otp/dart_dash_otp-library.html">dart_dash_otp</a></span> 
+
+</dt>
+<dd>@project  : dart_dash_otp
 @author   : Gin (gin.lance.inside@hotmail.com)
-@link     : <a href="https://github.com/BrunoMiguens/dart_otp">https://github.com/BrunoMiguens/dart_otp</a>
+@link     : <a href="https://github.com/BrunoMiguens/dart_dash_otp">https://github.com/BrunoMiguens/dart_dash_otp</a>
 @Disc     : a dart package to generate and verify one-time passwords
-            </dd>          </dl>
-        </section>
+</dd>
+
+          <dt id="hotp">
+  <span class="name"><a href="file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_hotp/file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_hotp-library.html">hotp</a></span> 
+
+</dt>
+<dd>@module   : HOTP module to generate and verify HOTP password
+@author   : Gin (gin.lance.inside@hotmail.com)
+</dd>
+
+          <dt id="otp">
+  <span class="name"><a href="file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_otp/file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_otp-library.html">otp</a></span> 
+
+</dt>
+<dd>@module   : OTP module to generate the password
+@author   : Gin (gin.lance.inside@hotmail.com)
+</dd>
+
+          <dt id="otp_algorithm">
+  <span class="name"><a href="file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_components_otp_algorithm/file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_components_otp_algorithm-library.html">otp_algorithm</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="otp_type">
+  <span class="name"><a href="file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_components_otp_type/file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_components_otp_type-library.html">otp_type</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="totp">
+  <span class="name"><a href="file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_totp/file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_totp-library.html">totp</a></span> 
+
+</dt>
+<dd>@module   : TOTP module to generate and verify TOTP password
+@author   : Gin (gin.lance.inside@hotmail.com)
+</dd>
+
+        </dl>
+      </section>
 
   </div> <!-- /.main-content -->
 
-  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="https://github.com/baldomerocho/dart_dash_otp">dart_dash_otp package</a></li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">dart_dash_otp</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="dart_dash_otp/dart_dash_otp-library.html">dart_dash_otp</a></li>
+      <li><a href="file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_hotp/file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_hotp-library.html">hotp</a></li>
+      <li><a href="file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_otp/file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_otp-library.html">otp</a></li>
+      <li><a href="file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_components_otp_algorithm/file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_components_otp_algorithm-library.html">otp_algorithm</a></li>
+      <li><a href="file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_components_otp_type/file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_components_otp_type-library.html">otp_type</a></li>
+      <li><a href="file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_totp/file-___Users_baldomerocho_Projects_colaboration_dart_dash_otp_lib_src_totp-library.html">totp</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div>
 
 </main>
 
 <footer>
   <span class="no-break">
-    dart_otp 1.3.0
+    dart_dash_otp
+      1.3.3
   </span>
 
   
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="static-assets/typeahead.bundle.min.js"></script>
-<script src="static-assets/highlight.pack.js"></script>
-<script src="static-assets/URI.js"></script>
-<script src="static-assets/script.js"></script>
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
 
 
 </body>
 
 </html>
+

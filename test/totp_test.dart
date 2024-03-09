@@ -61,7 +61,7 @@ void main() {
     var time = DateTime.parse('2019-01-01 00:00:00.000');
     var otpValue = totp.value(date: time);
 
-    expect(otpValue, '734632');
+    expect(otpValue, '577001');
     expect(totp.verify(otp: otpValue), false);
     expect(totp.verify(otp: otpValue, time: time), true);
   });

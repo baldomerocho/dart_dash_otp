@@ -53,3 +53,9 @@
 ## [1.3.3]
 
 * Use algorithm value from constructor when generating OTP
+
+## [1.3.4]
+
+* Upgrade
+* Update dependencies
+* Update documentation

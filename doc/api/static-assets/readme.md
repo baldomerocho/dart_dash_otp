@@ -1,19 +1,22 @@
 # highlight.js
 
-Generated from https://highlightjs.org/download/ on 2017-08-30
+Generated from https://highlightjs.org/download/ on 2021-07-13
 
-Included languages:
+**Included languages:**
 
 * bash
+* c  
 * css
 * dart
+* diff
+* html, xml
 * java
 * javascript
 * json
+* kotlin
 * markdown
-* objectivec
-* ruby - dragged in by `yaml` - 🙄
+* objective-c
+* plaintext  
 * shell
 * swift
-* xml - includes html
 * yaml
