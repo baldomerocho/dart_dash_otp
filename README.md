@@ -1,5 +1,8 @@
 # dart_otp - Null Safety
 
+## Test
+[![Flutter Test](https://github.com/baldomerocho/dart_dash_otp/actions/workflows/release.yaml/badge.svg)](https://github.com/baldomerocho/dart_dash_otp/actions/workflows/release.yaml)
+
 This is a fork of the [dart_otp](https://github.com/factisresearch/dart_otp/blob/master/test/totp_test.dart) repository, thank you for this contribution. Currently the original repo is not compatible with null safety so we made an update to make it compatible with newer versions of dart, e.g. 2.12.0.
 ___
 
