@@ -60,6 +60,14 @@ jobs:
       - name: Format coverage to LCOV
         run: dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --report-on=lib
 
+      # Runs before the minimum-coverage gate so the report reaches Codecov
+      # even when the gate fails.
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: coverage/lcov.info
+
       - name: Enforce minimum coverage
         uses: VeryGoodOpenSource/very_good_coverage@v3
         with:

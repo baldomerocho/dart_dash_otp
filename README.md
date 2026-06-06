@@ -7,6 +7,7 @@ parses Google Authenticator `otpauth://` URIs, and verifies codes with drift
 tolerance and constant-time comparison.
 
 [![CI](https://github.com/baldomerocho/dart_dash_otp/actions/workflows/ci.yaml/badge.svg)](https://github.com/baldomerocho/dart_dash_otp/actions/workflows/ci.yaml)
+[![codecov](https://codecov.io/gh/baldomerocho/dart_dash_otp/graph/badge.svg)](https://codecov.io/gh/baldomerocho/dart_dash_otp)
 [![pub version](https://img.shields.io/pub/v/dart_dash_otp.svg)](https://pub.dev/packages/dart_dash_otp)
 [![pub points](https://img.shields.io/pub/points/dart_dash_otp.svg)](https://pub.dev/packages/dart_dash_otp/score)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
