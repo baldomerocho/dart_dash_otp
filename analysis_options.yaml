@@ -1,0 +1,18 @@
+include: package:lints/recommended.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+  errors:
+    # Enum cases `OTPAlgorithm.SHA1` etc. stay in SCREAMING_CASE to preserve
+    # backward compatibility with published 1.x consumers.
+    constant_identifier_names: ignore
+
+linter:
+  rules:
+    - prefer_final_locals
+    - prefer_final_in_for_each
+    - avoid_dynamic_calls
+    - always_declare_return_types

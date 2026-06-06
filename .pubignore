@@ -1,0 +1,14 @@
+# Internal review notes (not for consumers).
+analisis/
+
+# Stale generated dartdoc; pub.dev rebuilds this.
+doc/api/
+
+# Generated coverage artifacts (test VM dumps + lcov).
+coverage/
+
+# Editor / tooling metadata.
+.idea/
+.fvm/
+.fvmrc
+.DS_Store
