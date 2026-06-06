@@ -1,0 +1,30 @@
+# Official pub.dev automated publishing.
+#
+# This workflow publishes the package to pub.dev whenever a tag matching
+# the version pattern is pushed (e.g. v2.0.0, v2.0.0-rc.1). It relies on
+# OIDC (no secrets/tokens are stored in the repository).
+#
+# ONE-TIME SETUP (required before the first automated release):
+#   The maintainer must enable "Automated publishing" for the package
+#   dart_dash_otp on pub.dev:
+#     1. Open https://pub.dev/packages/dart_dash_otp/admin
+#     2. Under "Automated publishing", enable publishing from GitHub Actions.
+#     3. Set the repository to:  baldomerocho/dart_dash_otp
+#     4. Set the tag pattern to: v{{version}}
+#   See https://dart.dev/tools/pub/automated-publishing for full details.
+#
+# After setup, pushing a tag such as `v2.0.0` triggers this workflow and
+# pub.dev verifies the OIDC token against the configured repo + tag pattern.
+
+name: Publish to pub.dev
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
+
+jobs:
+  publish:
+    permissions:
+      id-token: write # Required for OIDC authentication with pub.dev.
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1

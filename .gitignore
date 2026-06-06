@@ -13,3 +13,6 @@ ios/Runner/GeneratedPluginRegistrant.*
 
 test/.test_coverage.dart
 .fvm/
+
+# Generated API documentation (dartdoc output)
+doc/api/

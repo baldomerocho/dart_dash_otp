@@ -1,17 +1,26 @@
 name: dart_dash_otp
-description: dart_dash_otp is a dart package to generate and verify one-time passwords.
-version: 1.3.4
+description: >-
+  Generate and verify TOTP and HOTP one-time passwords (RFC 6238 / RFC 4226)
+  for 2FA and MFA, with otpauth:// URIs compatible with Google Authenticator.
+version: 2.0.0
 homepage: https://github.com/baldomerocho/dart_dash_otp
+repository: https://github.com/baldomerocho/dart_dash_otp
+issue_tracker: https://github.com/baldomerocho/dart_dash_otp/issues
+documentation: https://github.com/baldomerocho/dart_dash_otp/tree/master/doc
+topics:
+  - otp
+  - totp
+  - hotp
+  - authentication
+  - two-factor-authentication
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  crypto: ^3.0.1
-  base32: ^2.1.1
+  crypto: ^3.0.3
+  base32: ^2.1.3
 
 dev_dependencies:
-  test: ^1.16.5
-  test_coverage:
-    git:
-      url: https://github.com/Jjagg/test-coverage.git
+  test: ^1.25.0
+  lints: ^5.0.0
